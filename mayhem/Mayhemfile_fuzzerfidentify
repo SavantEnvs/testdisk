@@ -1,0 +1,9 @@
+project: savantenvs/testdisk
+target: fuzzerfidentify
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzerfidentify/testsuite
+cmds:
+  - cmd: /mayhem/fuzzerfidentify
+    libfuzzer: true
+    timeout: 5
